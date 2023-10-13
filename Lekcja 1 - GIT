@@ -1,0 +1,35 @@
+Git czyli kontrola wersji.
+
+------------------------------------------------------------ CO TO JEST GIT ------------------------------------------------------------
+Można to opisać jako drzewo który ma korzeń/pień (root/ main branch) i od niego odchodzą niezależne gałęzie (branche). Po co te branche?
+Dla pewnego rodzaju niezależności podczas programowania. Jak się za dzieciaka bawiłeś na drzewie z kolegami to lepszym rozwiązaniem było
+jak każdy siedział na innej gałęzi niż wszyscy na jednej. Jest ryzyko że się zdupcysz :D.
+
+Główna struktura to repozytorium czyli nasz cały projekt (coś jak jedna szafka), oraz branche - branch główny (main) i potencjalnie jakieś poboczne.
+Czemu? Na głównym branchu znajduję się nasz kod programu, przechowujemy go tutaj w repozytorium czyli takiej "chmurze", masz dostęp na każdym urządzeniu które ma neta, proste.
+Po co poboczne branche? Wyobraź sobie, że pracujemy razem nad jakimś projektem - projektujemy sklep internetowy. 
+Jakbyśmy sobie oboje pobrali projekt z główngo brancha i zaczęli pracować nad pewnymi rzeczami powiedzmy tydzień, po tygodniu nadupcania chcemy wrzucić swoje zmiany do repozytorium do głównego brancha.
+Nagle okazuje się że mieliśmy plik (klase) z logiką strony głównej naszego sklepu, ja napisałem wyszukiwarke towarów - zrobiłem nową klase "SearchBar" i dodałem kilka zmian do klasy "MainSite".
+Ty dopisałeś do "MainSite" logikę od jakiś promocji. I co? Dupa bo nagle okazuje się że oboje chcemy nadpisać klase w różny sposób. Ja dodaje coś przykładowo w liniach 100-120, zmieniam coś w 50-60, 
+a Ty pozmieniałeś logikę i się okazało że zrobiłeś zmiany w kodzie w liniach 50-200. Lepiej ma ten co wrzuci swój kod pierwszy (powiedzmy ja), bo mam spokój,
+potem Ty chcesz zrobić zmiany a tu się okazuje że wersja (stąd KONTROLA WERSJI) na repozytorium jest już inna od tej na której ty zaczynałeś pracować. 
+Mamy tak zwany konflikt, a konflikty się rozwiązuje. Jak? W najlepszym przypadku masz programy które pomagają rozwiązać konflikty i
+masz podzielony ekran na 3 części: Twój kod | Finalny kod | Kod z repozytorium. I teraz tam gdzie się pokryły zmiany klikasz, chce swój kod/chce kod z repozytorium. 
+Jak masz naprawić 10 linijek kodu to pikuś, jak już masz poprawić po 30 i więcej w kilku plikach to się robi bagno. 
+W końcu nie pracowałeś tydzień po to żeby teraz cały dzień siedzieć i rozkminiać co ja zrobiłem i jak rozwiązać konflikt żeby tego nie spierd**ić.
+Jak uniknąć tego problemu? W pewnym sensie się nie da, ale możesz zminimalizować problem. Rób więcej commitów ale mniejsze, możesz użyć branchy 
+w celu ustrukturyzowania kodu i danych featerów twojego programu. 
+
+Po to są branche, że gdy chcesz wrzucić jakiś prototyp - czyli coś niegotowego, to możesz sobie zrobić strukturę: 
+main 
+  feature1 - SearchBar
+    feature1.1 DetailSearch
+    feature1.2 VisualSpecification
+  feature2 - Promotions
+    feature2.1 PromoTab
+    feature2.2 PromoSearch
+    feature2.3 XYZ
+
+W tym momencie ja się bawie na branchu feature1 - on ma jeszcze dwa branche oddzielne w których jakieś większe detale ogarniam, Ty się bawisz z Promocjami.
+Nie czekasz tydzień żeby coś wrzucić, wrzucasz codziennie zmiany na tego brancha, ja na swojego - nia bawimy się w konflikty bo działamy na różnych branchach.
+Jak dochodzi do momentu że oboje stwierdzamy że nasz kod jest gotowy to "mergujemy" branch feature1 / feature2 z main'em. Wtedy musimy rozwiązać potencjalne konflikty.
