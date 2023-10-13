@@ -1,0 +1,2 @@
+# Paja
+Programowanie po chłopsku
