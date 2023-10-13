@@ -36,10 +36,10 @@ wlatuje to na maina. (Nie do końca to jest prawda co napisałem ale dla zobrazo
 Chujowy wstęp ale jak to mówią - swój. 
 Teraz pobierz na kompa gita, dzięki temu będziesz mógł na konsoli postawić sobie repozytorium, wrzucać zmiany itd.
 https://git-scm.com/downloads
+https://www.youtube.com/watch?v=5kthjoGs2hw - Pomoc w sklonowaniu repo
 Krok po kroku:
 Zrób sobie na kompie jakiś folder w którym będziesz miec swoje repo. 
-Odpal komende git init w tym folderze
-git clone LINK_DO_REPO
+Odpal komende git clone LINK_DO_REPO
 I już. Masz lokalnie to co jest tutaj na githubie.
 Żeby pobrać (zaciągnąć) najnowszy kod robisz git pull
 Żeby wysłać (wypchnąć) twoje zmiany robisz git push (tak po krótce, rozwiniemy potem)
