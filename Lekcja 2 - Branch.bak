@@ -1,0 +1,58 @@
+------------------------------------------------------------ CO TO JEST GIT ------------------------------------------------------------
+  Git służy do ogarnięcia kodu programu, nad którym siedzi zazwyczaj kilka/kilkadziesiąt/kilkaset osób. 
+Można to opisać jako drzewo który ma korzeń/pień (root/ main branch) i od niego odchodzą gałęzie (branche). Po co te branche?
+Dla pewnego rodzaju niezależności podczas programowania. Jak się za dzieciaka bawiłeś na drzewie z kolegami to lepszym rozwiązaniem było
+jak każdy siedział na innej gałęzi niż wszyscy na jednej. Jest ryzyko że się zdupcysz :D. Tak samo lepiej jak każdy zmienia inną część 
+programu niż wszyscy jedną, potem są konflikty (takie w programowaniu), a nikt nie lubi ich rozwiązywać.
+  
+  Główna struktura to repozytorium czyli nasz cały projekt (całe drzewo), oraz branche - branch główny (main) i potencjalnie jakieś poboczne.
+Czemu? Na głównym branchu znajduję się nasz kod programu, przechowujemy go tutaj w repozytorium czyli takiej "chmurze", masz dostęp
+na każdym urządzeniu które ma neta, proste. 
+Po co poboczne branche? Rozwijając myśl o konfliktach: wyobraź sobie, że pracujemy razem nad jakimś projektem - projektujemy sklep internetowy. 
+Jakbyśmy sobie oboje pobrali projekt z główngo brancha i zaczęli pracować nad pewnymi rzeczami powiedzmy tydzień, po tygodniu nadupcania chcemy 
+wrzucić swoje zmiany do repozytorium do głównego brancha. Nagle okazuje się że oboje zmieniliśmy ten sam plik (klase). I jest konflikt. Cały
+tydzień mojej i twojej pracy musimy teraz dogadać i połączyć w jeden kod. Brzmi jak kupa straconego czasu. Dlatego lepiej jak każdy pracuje nad czymś
+innym. Można działać tylko na głównym branchu, ale jest ryzyko że jak coś zepsujesz to program przestanie działać i każdy co pobierze najnowszy kod
+z repozytorium dostanie wersje która nie działa.
+
+------------------------------------------------------------ BRANCH ------------------------------------------------------------
+  Po to są branche, że gdy chcesz wrzucić jakiś prototyp - czyli coś niegotowego, to możesz sobie zrobić strukturę: 
+
+-main 
+  -feature1 - X
+  -feature2 - Y
+
+W tym momencie ja się bawie na branchu feature1, Ty się bawisz z feature2. Gdy chce, bez stresu wrzucam swoje zmiany na brancha feature1, zamiast 
+na maina. Finalnie mamy kod na mainie, oraz inny kod na feature1, jeszcze inny na feature2. W ten sposób niezależnie rozwijamy kod programu
+w dwie różne strony, nie przeszkadzając sobie, no bo przecież pracujemy na zupełnie innych gałęziach. W momencie gdy mój/twój kod jest gotowy i skończony.
+Robimy "merge" do maina, czyli tak jakby wrzucamy wszystko co zrobiliśmy w feature1 do main 
+(usuwamy branch feature1 bo już jest niepotrzebny - po co duplikat kody który jest na main). W ten sposób osoba która chce sobie skorzystać z programu,
+odpalając wersje kodu z main ma pewność że zawsze ten kod będzie działać. To tak jak w LoLu mamy aktualizację do dwa tygodnie. To nie znaczy przecież, że
+ludzie tam 2 tygodnie w chuja lecą, a potem w jeden dzień wrzucają zmiany. Te zmiany się tworzą stopniowo na jakiś wewnętrznych branchach a potem jako finalna wersja
+wlatuje to na maina. (Nie do końca to jest prawda co napisałem ale dla zobrazowania dobry przykład)
+
+------------------------------------------------------------ JAK ZACZĄĆ? ------------------------------------------------------------
+
+Chujowy wstęp ale jak to mówią - swój. 
+Teraz pobierz na kompa gita, dzięki temu będziesz mógł na konsoli postawić sobie repozytorium, wrzucać zmiany itd.
+https://git-scm.com/downloads
+https://www.youtube.com/watch?v=5kthjoGs2hw - Pomoc w sklonowaniu repo
+Krok po kroku:
+Zrób sobie na kompie jakiś folder w którym będziesz miec swoje repo. 
+Odpal komende git clone LINK_DO_REPO
+I już. Masz lokalnie to co jest tutaj na githubie.
+Żeby pobrać (zaciągnąć) najnowszy kod robisz git pull
+Żeby wysłać (wypchnąć) twoje zmiany robisz git push (tak po krótce, rozwiniemy potem)
+
+Jak wszystko pójdzie ok to powninny w twoim folderze pojawić się dwa pliki. README i Lekcja1 - GIT.
+
+------------- SCIĄGA ------------
+Git - Narzędzie do kontrolowania wersji kodu
+Github - Portal który udostępnia nam miejsce na repozytorium - za pomocą git-a ten kod możemy tutaj wrzucać
+repo - repozytorium, inaczej możemy to określić magazynem? dyskiem? tutaj przechowujemy to co chcemy.
+branch - Część struktury naszego repozytorium, branche możemy mergować ze sobą.
+merge - połączenie dwóch branchy w jeden (ich kodu)
+commit - operacja, która zawiera nowy kod do wysłania do repozytorium (wysyłamy to za pomocą git push - można w takim pushu wysłać kilka commitów)
+feature - nie umiem na polski znaleźć dobrego słowa - featurem kalkulatora jest dodawanie odejmowanie itd, naukowy kalkulator ma dodatkowe featury jak np całkowanie.
+
+

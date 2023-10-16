@@ -1,0 +1,46 @@
+------------------------------------------------------------ PODSTAWY BRANCHY ------------------------------------------------------------
+Zadanie 1
+Dodałem DWIE rzeczy do tej lekcji - tą instrukcję oraz nasz goły jak narazie projekt. Jak sobie użyłeś komendy git pull to pewnie widzisz tylko instrukcję.
+Używając komend git branch XYZ - stworzysz nowy branch o nazwie XYZ, ja tak zrobiłem i stworzyłem nowy branch w naszym repozytorium. Żebyś mógł go zobaczyć użyj komendy
+git branch -r (opcja -r jest po to żeby widzieć remote (te w chmurze) branche). Możesz spróbować samo git branch, ale chyba to pokazuje tylko twoje lokalne branche.
+I co, przydałoby się pobrać też projekt. To cyk: git checkout XYZ - komenda do przełączania się miedzy branchami - podajesz w XYZ nazwe brancha oczywiscie, sobie sprawdzisz jak wylistujesz branche :)
+Jesteś teraz na innym branchu, więc jak chcemy mieć najnowszy kod który jest na repo musimy znowu użyć git pull. 
+
+Zadanie 2
+Branche raczej nie są wieczne, no może poza mainem, chodzi mi o to, że dla czystości i takiej systematyzacji robimy te branche, ale jak zrobimy to co chcieliśmy w branchu, zazywczaj mergujemy zmiany
+do maina (głównego brancha) i usuwamy go. No to spróbujmy. (żeby zrobić to co dalej pisze musisz mieć skończoną część 1, czyli aktualny kod lokalnie we wszystkich branchach)
+Żeby zmergować branch XYZ do maina musisz znajdować się z mainie, czyli odpowiednią komendą wracamy do main'a, następnie korzystamy z opcji "merge" czyli git merge XYZ - Ta komenda "merguje" (łączy xD) branch XYZ z branchem
+na którym się aktualnie znajdujesz. Żeby się upewnić że działa, przed operacją nie miałeś projektu na main branchu, po operacji powinien się on tutaj znajdować (jest widoczny w Finderze- tak na macu sie nazywa ta przegladarka plikow, nie wiem jak po PL).
+Ok zakładam że działa, ostatnia rzecz to posprzątanie za sobą - usuwamy branch XYZ. 
+Lokalnie: git branch -d XYZ   (-d od delete)
+Remotely (wolę po angielsku, chodzi oczywiscie o repo na githubie): git push origin --delete XYZ 
+
+------------------------------------------------------------ JAK ZACZĄĆ? ------------------------------------------------------------
+
+Chujowy wstęp ale jak to mówią - swój. 
+Teraz pobierz na kompa gita, dzięki temu będziesz mógł na konsoli postawić sobie repozytorium, wrzucać zmiany itd.
+https://git-scm.com/downloads
+https://www.youtube.com/watch?v=5kthjoGs2hw - Pomoc w sklonowaniu repo
+Krok po kroku:
+Zrób sobie na kompie jakiś folder w którym będziesz miec swoje repo. 
+Odpal komende git clone LINK_DO_REPO
+I już. Masz lokalnie to co jest tutaj na githubie.
+Żeby pobrać (zaciągnąć) najnowszy kod robisz git pull
+Żeby wysłać (wypchnąć) twoje zmiany robisz git push (tak po krótce, rozwiniemy potem)
+
+Jak wszystko pójdzie ok to powninny w twoim folderze pojawić się dwa pliki. README i Lekcja1 - GIT.
+
+------------- SCIĄGA ------------
+Git - Narzędzie do kontrolowania wersji kodu
+Github - Portal który udostępnia nam miejsce na repozytorium - za pomocą git-a ten kod możemy tutaj wrzucać
+repo - repozytorium, inaczej możemy to określić magazynem? dyskiem? tutaj przechowujemy to co chcemy.
+branch - Część struktury naszego repozytorium, branche możemy mergować ze sobą.
+merge - połączenie dwóch branchy w jeden (ich kodu)
+commit - operacja, która zawiera nowy kod do wysłania do repozytorium (wysyłamy to za pomocą git push - można w takim pushu wysłać kilka commitów)
+feature - nie umiem na polski znaleźć dobrego słowa - featurem kalkulatora jest dodawanie odejmowanie itd, naukowy kalkulator ma dodatkowe featury jak np całkowanie.
+git pull - update brancha na którym się znajdujesz (pobranie rzeczy z repo)
+git push - update brancha w repozytorium (wysłanie rzeczy do repo)
+git checkout XYZ - przełączenie się na branch XYZ
+git branch - listowanie branchy
+git branch XYZ - stworzenie nowego brancha o nazwie XYZ
+
