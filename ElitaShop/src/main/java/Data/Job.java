@@ -1,5 +1,6 @@
-package Data;
-public class Job extends Event{
+package main.java.Data;
+
+public class Job extends Event {
     private String shift;
     private int hourPrice;
 

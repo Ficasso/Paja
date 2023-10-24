@@ -1,6 +1,6 @@
-package Data;
+package main.java.Data;
 
-public class Running extends Event{
+public class Running extends Event {
     private int distance;
     private int duration;
 

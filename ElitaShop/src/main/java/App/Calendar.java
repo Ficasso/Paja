@@ -1,4 +1,7 @@
-package Data;
+package main.java.App;
+
+import main.java.Data.Event;
+import main.java.Data.File;
 
 public class Calendar {
     public static void main(String[] args) {

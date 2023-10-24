@@ -1,4 +1,4 @@
-package Data;
+package main.java.Data;
 
 public class Event {
     private String name;
@@ -28,7 +28,7 @@ public class Event {
                 "Place: " + getPlace()+ "\n");
     }
 
-public Event (){};
+    public Event (){};
 
     public Event(String name, String date, String time, String place) {
         this.name = name;
