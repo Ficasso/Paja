@@ -3,6 +3,11 @@ package main.java.Data;
 public class Job extends Event {
     private String shift;
     private int hourPrice;
+    public Job(String name, String date, String time, String place, String shift, int hourPrice) {
+        super(name, date, time, place);
+        this.shift = shift;
+        this.hourPrice = hourPrice;
+    }
 
     public void printInfo (){
         System.out.println(
@@ -14,11 +19,7 @@ public class Job extends Event {
                         "Hour price: " + hourPrice+ "zł/h\n");
     }
 
-    public Job(String name, String date, String time, String place, String shift, int hourPrice) {
-        super(name, date, time, place);
-        this.shift = shift;
-        this.hourPrice = hourPrice;
-    }
+
 
 
 }

@@ -5,6 +5,14 @@ public class Event {
     private String date;
     private String time;
     private String place;
+    public Event (){};
+
+    public Event(String name, String date, String time, String place) {
+        this.name = name;
+        this.date = date;
+        this.time = time;
+        this.place = place;
+    }
 
     public void addEvent (String name, String date, String time, String place){
         this.name = name;
@@ -28,14 +36,7 @@ public class Event {
                 "Place: " + getPlace()+ "\n");
     }
 
-    public Event (){};
 
-    public Event(String name, String date, String time, String place) {
-        this.name = name;
-        this.date = date;
-        this.time = time;
-        this.place = place;
-    }
 
     public String getName() {
         return name;

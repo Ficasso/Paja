@@ -3,6 +3,11 @@ package main.java.Data;
 public class Running extends Event {
     private int distance;
     private int duration;
+    public Running(String name, String date, String time, String place, int distance, int duration) {
+        super(name, date, time, place);
+        this.distance = distance;
+        this.duration = duration;
+    }
 
     public void printInfo (){
         System.out.println(
@@ -17,11 +22,7 @@ public class Running extends Event {
 
 
 
-    public Running(String name, String date, String time, String place, int distance, int duration) {
-        super(name, date, time, place);
-        this.distance = distance;
-        this.duration = duration;
-    }
+
 
     public int getDistance() {
         return distance;
