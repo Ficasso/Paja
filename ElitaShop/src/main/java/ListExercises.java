@@ -72,7 +72,14 @@ public class ListExercises {
     //2. jak position jest większe niż nasza lista, to dodajemy zeby był jako ostatni element
     public List<Integer> addAtSpecifiedPosition(int value, int position){
        init();
-       return null;
+       if (position < 0){
+           arrL.add(0, value);
+       }else if (position > arrL.size()){
+           arrL.add( value);
+       }else{
+           arrL.add(position,value);
+       }
+       return arrL;
     }
 
 
